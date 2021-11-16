@@ -1,0 +1,6 @@
+<h1>My tasks</h1>
+<ul>
+<%@tasks.each do |task|%>
+<li><%= link_to "#{task.title}", task_path(task.id)%> - <a data-method="delete"  href="delete/task/<%=task.id%>"><i class="far fa-trash-alt"></i></a></li>
+<%end%>
+</ul>
